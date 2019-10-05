@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class DiagnosisValidationViolationResolver implements Validatgit diff ionViolationResolver {
+public class DiagnosisValidationViolationResolver implements ValidationViolationResolver {
 
     @Override
     public void resolveValidationViolation(ValidationResult validationResult) {
