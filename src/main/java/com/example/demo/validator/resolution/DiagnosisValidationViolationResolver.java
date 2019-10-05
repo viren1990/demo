@@ -1,10 +1,13 @@
 package com.example.demo.validator.resolution;
 
 import com.example.demo.validator.ValidationResult;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DiagnosisValidationViolationResolver implements ValidationViolationResolver {
+@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+public class DiagnosisValidationViolationResolver implements Validatgit diff ionViolationResolver {
 
     @Override
     public void resolveValidationViolation(ValidationResult validationResult) {

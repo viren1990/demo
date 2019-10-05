@@ -18,7 +18,7 @@ public class ValidationResult {
     }
 
     public boolean hasErrors(){
-        return errors.isEmpty();
+        return !errors.isEmpty();
     }
 
     public boolean addError(final ValidationError error){
