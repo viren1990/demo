@@ -1,21 +1,22 @@
 package com.example.demo.validator.facade;
 
-import com.example.demo.validator.ValidationResult;
 import com.example.demo.validator.ValidationType;
 import com.example.demo.validator.ValidatorContext;
-import com.example.demo.validator.request.DiagnosisValidationRequest;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 @Service
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class DiagnosisValidationFacade extends ValidationFacade<DiagnosisValidationRequest> {
+public class DiagnosisValidationFacade extends ValidationFacade {
 
     @Override
-    ValidationResult validateInternal(ValidatorContext context, DiagnosisValidationRequest object) {
+    void validateInternal(ValidatorContext context) {
+
+        // process request and update context with info fetched as part of request execution.
+
         System.out.println("Into Diagnosis Validation Facade");
-        return new ValidationResult();
+
     }
 
     @Override
